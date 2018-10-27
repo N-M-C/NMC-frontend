@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Slideshow from '../lib/Slideshow';
-
 import '../css/Word.css';
 
 class Word extends React.Component {
@@ -22,7 +21,7 @@ class Word extends React.Component {
 
   render() {
     const { number } = this.state;
-    const { text } = this.props;
+    const { text, answer } = this.props;
     return (
       <React.Fragment>
         <a className="button close" onClick={this.props.onClose}>
@@ -33,6 +32,7 @@ class Word extends React.Component {
             <div className={`slide__bg slide__bg--1`} />
             <h2 className={`word word--${number} word--question`}>Q) {text}</h2>
             {/* 일단은 더미데이터로 예상 질문들 만들어보기 */}
+            {answer}
             {text =='병원이 어디예요' && <div className={`word word--answer`}>A) 서울시 서초구 강남동입니다</div>}
             {(text.indexOf('고장') >= 0) && <div className={`word word--answer`}>A) 접수되었습니다. </div>}
             {(text.indexOf('중환자실') >= 0) && (text.indexOf('층') >= 0) && <div className={`word word--answer`}> 3층입니다. </div>}
