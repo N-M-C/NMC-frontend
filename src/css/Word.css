@@ -87,6 +87,11 @@ width: 100%;
 
 .word--answer{
 	z-index: 100;
+	background-color: white;
+    margin: 20px;
+    color: black;
+    font-size: 20px;
+    padding: 20px 10px;
 }
 .word--question{
 	margin-top: 10vw;
@@ -162,6 +167,13 @@ width: 100%;
 	left: 20px;
 	z-index: 9999;
 	color: #fff;
+	border: #202f24  2px solid !important;
 	/* border-radius: 50%; */
 	padding: 15px !important;
+}
+
+.hovi-icon{
+	position: relative;
+	margin: auto;
+	display: flex;
 }
